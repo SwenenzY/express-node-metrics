@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/SwenenzY/express-node-metrics.git"
+    "url": "git://github.com/SwenenzY/express-node-metrics-v12.git"
   },
   "scripts": {
     "test": "istanbul cover node_modules/.bin/_mocha -- --recursive --reporter mochawesome",
@@ -14,9 +14,9 @@
     "doctoc": "npm install -g doctoc && doctoc README.md"
   },
   "bugs": {
-    "url": "https://github.com/SwenenzY/express-node-metrics/issues"
+    "url": "https://github.com/SwenenzY/express-node-metrics-v12/issues"
   },
-  "homepage": "https://github.com/SwenenzY/express-node-metrics",
+  "homepage": "https://github.com/SwenenzY/express-node-metrics-v12",
   "keywords": [
     "metrics",
     "node",
