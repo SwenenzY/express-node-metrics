@@ -1,7 +1,7 @@
-# express-node-metrics
-[![NPM](https://nodei.co/npm/express-node-metrics.png)](https://nodei.co/npm/express-node-metrics/)
+# express-node-metrics-v12
+[![NPM](https://nodei.co/npm/express-node-metrics-v12.png)](https://nodei.co/npm/express-node-metrics-v12/)
 
-[![NPM](https://nodei.co/npm-dl/express-node-metrics.png?height=3)](https://nodei.co/npm/express-node-metrics/)
+[![NPM](https://nodei.co/npm-dl/express-node-metrics-v12.png?height=3)](https://nodei.co/npm/express-node-metrics-v12/)
 
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
@@ -67,13 +67,13 @@ This package is a platform for collecting metrics of node and express applicatio
 
 ## Install
 ```bash
-npm install --save express-node-metrics
+npm install --save express-node-metrics-v12
 ```
 
 ## API
 ### express_node_metrics
 ```js
-var express_node_metrics = require('express-node-metrics');
+var express_node_metrics = require('express-node-metrics-v12');
 ```
 This creates a new instance of `express_node_metrics`.
 
@@ -813,7 +813,7 @@ RUN apk update && \
 ### Middleware
 #### Express
 ```js
-var metricsMiddleware = require('express-node-metrics').middleware;
+var metricsMiddleware = require('express-node-metrics-v12').middleware;
 app.use(metricsMiddleware);
 
 app.get('/users', function(req, res, next) {
@@ -881,7 +881,7 @@ server.listen(serverPort, function () {
 
 ### Internal metrics
 ```js
-var middleware = require('express-node-metrics').metrics;
+var middleware = require('express-node-metrics-v12').metrics;
 var stackTrace = require('stack-trace');
 var kafka = require('../helpers/kafkaHelper');
 var kafka_topic = process.env.KAFKA_TOPIC || "Sandbox_Apps_Storage_Audit";
@@ -906,7 +906,7 @@ function auditResponse(message, next) {
 'use strict'
 var express = require("express");
 var router = express.Router();
-var metrics = require('express-node-metrics').metrics;
+var metrics = require('express-node-metrics-v12').metrics;
 
 router.get('/', function (req, res) {
     res.send(metrics.getAll(req.query.reset));
@@ -930,13 +930,13 @@ Using mocha, istanbul and mochawesome
 npm test
 ```
 
-[npm-image]: https://img.shields.io/npm/v/express-node-metrics.svg?style=flat
-[npm-url]: https://npmjs.org/package/express-node-metrics
-[travis-image]: https://travis-ci.org/idanto/express-node-metrics.svg?branch=master
-[travis-url]: https://travis-ci.org/idanto/express-node-metrics
-[coveralls-image]: https://coveralls.io/repos/github/idanto/express-node-metrics/badge.svg?branch=master
-[coveralls-url]: https://coveralls.io/github/idanto/express-node-metrics?branch=master
-[downloads-image]: http://img.shields.io/npm/dm/express-node-metrics.svg?style=flat
-[downloads-url]: https://npmjs.org/package/express-node-metrics
+[npm-image]: https://img.shields.io/npm/v/express-node-metrics-v12.svg?style=flat
+[npm-url]: https://npmjs.org/package/express-node-metrics-v12
+[travis-image]: https://travis-ci.org/idanto/express-node-metrics-v12.svg?branch=master
+[travis-url]: https://travis-ci.org/idanto/express-node-metrics-v12
+[coveralls-image]: https://coveralls.io/repos/github/idanto/express-node-metrics-v12/badge.svg?branch=master
+[coveralls-url]: https://coveralls.io/github/idanto/express-node-metrics-v12?branch=master
+[downloads-image]: http://img.shields.io/npm/dm/express-node-metrics-v12.svg?style=flat
+[downloads-url]: https://npmjs.org/package/express-node-metrics-v12
 [license-image]: http://img.shields.io/badge/license-MIT-blue.svg?style=flat
 [license-url]: LICENSE
